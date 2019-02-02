@@ -1,0 +1,275 @@
+body {
+    height: 400vh;
+    margin: 0;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+    overflow: hidden;
+}
+
+#intro .layers {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#intro .layers::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, #7D440D);
+    opacity: 0.43;
+    z-index: 11;
+}
+
+#intro .layers > img,
+#intro .layers > .gem,
+#intro .layers > div {
+    position: absolute;
+}
+
+#intro .layers .layer {
+    transform: scale(0.71);
+}
+
+#intro .layers .layer img {
+    width: 100%;
+    transform: scale(1);
+}
+
+#intro img {
+    transform: scale(0.71);
+}
+
+#intro .sky {
+    top: 0;
+    left: 0;
+    transform-origin: left top;
+    z-index: 0;
+}
+
+#intro .layer.sky img {
+    width: auto;
+}
+
+#intro .sky.active {
+    top: -130px;
+}
+
+#intro .mountains {
+    bottom: -43px;
+    left: 0;
+    z-index: 1;
+}
+
+#intro .layer.mountains img {
+    width: auto;
+}
+
+#intro .mountains.active {
+    bottom: 67px;
+}
+
+#intro .cloud-1 {
+    bottom: 225px;
+    right: 0;
+    transform-origin: right bottom;
+    z-index: 2;
+}
+
+#intro .layer.cloud-1 img {
+    width: auto;
+}
+
+#intro .cloud-1.active {
+    bottom: 515px;
+}
+
+#intro .layer.gem {
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#intro .gem.active {
+    top: 66.6px;
+    opacity: 1;
+    transform: translate(-50%, 0%);
+}
+
+#intro .gem h1 {
+    font-size: 2.76vw;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#intro .gem strong {
+    display: block;
+    font-size: 8.2vw;
+    background: -webkit-linear-gradient(#fff, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#intro .cloud-2 {
+    bottom: 178px;
+    left: -29px;
+    transform-origin: left bottom;
+    z-index: 4;
+}
+
+#intro .layer.cloud-2 img {
+    width: auto;
+}
+
+#intro .cloud-2.active {
+    bottom: 415px;
+}
+
+#intro .desert-2 {
+    bottom: -174px;
+    left: 0;
+    transform-origin: left top;
+    z-index: 5;
+}
+
+#intro .layer.desert-2 img {
+    width: auto;
+}
+
+#intro .desert-2.active {
+    bottom: -95px;
+}
+
+#intro .pyramids-3 {
+    max-width: 294px;
+    bottom: 258px;
+    right: 14px;
+    transform-origin: right bottom;
+    z-index: 6;
+}
+
+#intro .pyramids-3.active {
+    max-width: 234.62px;
+}
+
+#intro .pyramids-2 {
+    max-width: 593px;
+    bottom: 223px;
+    right: 63px;
+    transform-origin: right bottom;
+    z-index: 7;
+}
+
+#intro .pyramids-2.active {
+    max-width: 353.93px;
+}
+
+#intro .pyramids-1 {
+    max-width: 1458px;
+    bottom: 140px;
+    right: 87px;
+    transform-origin: right bottom;
+    z-index: 8;
+}
+
+#intro .pyramids-1.active {
+    max-width: 982.34px;
+}
+
+#intro .desert-3 {
+    /* bottom: -302px;
+    left: 143px; */
+    bottom: -300px;
+    left: -134px;
+    transform-origin: left top;
+    z-index: 9;
+}
+
+#intro .layer.desert-3 img {
+    width: auto;
+}
+
+#intro .desert-3.active {
+    /* bottom: calc(-100vh - 629px); */
+    left: -22px;
+}
+
+#intro .sphinx {
+    max-width: 1211.86px;
+    bottom: -92.2px;
+    transform-origin: left bottom;
+    z-index: 10;
+}
+
+#intro .sphinx.active {
+    max-width: 741.86px;
+}
+
+#intro .scroll {
+    bottom: 0;
+    font-size: 1rem;
+    z-index: 13;
+    left: 10%;
+    color: white;
+}
+
+#intro .scroll p {
+    transform: rotate(-90deg);
+}
+
+#intro .scroll .scroll-bar {
+    background: rgb(255, 136, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+}
+
+#intro .scroll.active {
+    top: 0;
+    height: 100%;
+}
+
+#intro .scroll.active p {
+    opacity: 0;
+}
+
+#intro .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    background-color: #7D440D;
+}
+
+#intro .overlay.active {
+    opacity: 1;
+}
+
+#intro .overlay a {
+    opacity: 0;
+}
+
+#intro .overlay a.active {
+    opacity: 1;
+}
