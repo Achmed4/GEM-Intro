@@ -216,29 +216,36 @@ body {
     bottom: 0;
     font-size: 1rem;
     z-index: 13;
-    left: 10%;
+    left: 8%;
     color: white;
 }
 
 #intro .scroll p {
+    transition: 0.3s ease;
     transform: rotate(-90deg);
 }
 
-#intro .scroll .scroll-bar {
+#intro .scroll-bar {
     background: rgb(255, 136, 0);
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 10%;
     width: 2px;
-    height: 100%;
+    height: 50px;
+    transition: opacity 0.3s ease;
+    z-index: 13;
 }
 
-#intro .scroll.active {
+#intro .scroll-bar.active {
     top: 0;
     height: 100%;
 }
 
-#intro .scroll.active p {
+#intro .scroll-bar.hide {
+    height: 0;
+}
+
+#intro .scroll-bar.active + .scroll p {
     opacity: 0;
 }
 
