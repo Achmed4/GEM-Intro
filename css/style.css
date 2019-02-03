@@ -37,7 +37,7 @@ body {
 }
 
 #intro .layers .layer {
-    transform: scale(0.71);
+    transition: 1s ease-in-out;
 }
 
 #intro .layer img {
@@ -184,10 +184,8 @@ body {
 }
 
 #intro .desert-3 {
-    /* bottom: -302px;
-    left: 143px; */
     bottom: -300px;
-    left: -134px;
+    left: 134px;
     transform-origin: left top;
     z-index: 9;
 }
@@ -197,7 +195,7 @@ body {
 }
 
 #intro .desert-3.active {
-    /* bottom: calc(-100vh - 629px); */
+    bottom: -222px;
     left: -22px;
 }
 
@@ -213,10 +211,10 @@ body {
 }
 
 #intro .scroll {
-    bottom: 0;
+    bottom: 35px;
+    left: 8%;
     font-size: 1rem;
     z-index: 13;
-    left: 8%;
     color: white;
 }
 
@@ -226,12 +224,12 @@ body {
 }
 
 #intro .scroll-bar {
-    background: rgb(255, 136, 0);
+    background:#FF5700;
     position: absolute;
     bottom: 0;
     left: 10%;
-    width: 2px;
-    height: 50px;
+    width: 3px;
+    height: 95px;
     transition: opacity 0.3s ease;
     z-index: 13;
 }
@@ -260,6 +258,7 @@ body {
     align-items: center;
     z-index: 12;
     background-color: #7D440D;
+    transition: 1s ease-in-out;
 }
 
 #intro .overlay.active {
